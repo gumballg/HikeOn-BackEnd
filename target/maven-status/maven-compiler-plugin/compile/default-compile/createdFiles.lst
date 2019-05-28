@@ -1,0 +1,8 @@
+hikingApp/SecurityConfiguration.class
+hikingApp/CorsConfig.class
+hikingApp/Application.class
+hikingApp/UserRepository.class
+hikingApp/UserController.class
+hikingApp/User.class
+hikingApp/UserService.class
+hikingApp/WebMvcConfig.class
