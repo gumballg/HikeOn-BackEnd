@@ -22,16 +22,31 @@ public class UserController {
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    //index
-    @GetMapping("/users")
-    public Iterable<User> getUser() {
-        return userRepository.findAll();
-    }
+//    //index
+//    @GetMapping("/users")
+//    public Iterable<User> getUser() {
+//        return userRepository.findAll();
+//    }
 
     //show
     @GetMapping("/users/{id}")
     public HashMap<String, Object> findUser(@PathVariable("id") Long id)throws Exception{
         Optional<User> response = userRepository.findById(id);
+        if(response.isPresent()){
+            User user = response.get();
+            HashMap<String, Object> result = new HashMap<>();
+            result.put("user", user);
+            return result;
+        }
+        throw new Exception("No such user");
+    }
+
+    //current
+    @GetMapping("/users/current")
+    public HashMap<String, Object> findCurrentUser(HttpSession session)throws Exception{
+        String sessionUsername = session.getId();
+        Long longUsername = Long.parseLong(sessionUsername);
+        Optional<User> response = userRepository.findById(longUsername);
         if(response.isPresent()){
             User user = response.get();
             HashMap<String, Object> result = new HashMap<>();
@@ -48,6 +63,10 @@ public class UserController {
         if(createdUser != null){
             session.setAttribute("username", createdUser.getUsername());
         }
+        System.out.println("session id");
+        System.out.println(session.getId());
+        System.out.println("session.getAttributeNames");
+        System.out.println(session.getAttribute("username"));
         return createdUser;
     }
 
