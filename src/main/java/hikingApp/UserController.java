@@ -22,11 +22,11 @@ public class UserController {
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-//    //index
-//    @GetMapping("/users")
-//    public Iterable<User> getUser() {
-//        return userRepository.findAll();
-//    }
+    //index
+    @GetMapping("/users")
+    public Iterable<User> getUser() {
+        return userRepository.findAll();
+    }
 
     //show
     @GetMapping("/users/{id}")
@@ -83,8 +83,7 @@ public class UserController {
         Optional<User> editUser = userRepository.findById(id);
         if(editUser.isPresent()){
             User user = editUser.get();
-            user.setUsername(formData.getUsername());
-            user.setPassword(formData.getPassword());
+            user.setLocation(formData.getLocation());
             return userRepository.save(user);
         }
         throw new Exception("no such user");
