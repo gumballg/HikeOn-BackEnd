@@ -17,18 +17,21 @@ public class UserController {
     private UserRepository userRepository;
 
     @Autowired
+    private TrailRepository trailRepository;
+
+    @Autowired
     private UserService userService;
 
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    //index
+//    index
     @GetMapping("/users")
     public Iterable<User> getUser() {
         return userRepository.findAll();
     }
 
-    //show
+//    show
     @GetMapping("/users/{id}")
     public HashMap<String, Object> findUser(@PathVariable("id") Long id)throws Exception{
         Optional<User> response = userRepository.findById(id);
@@ -44,13 +47,16 @@ public class UserController {
     //current
     @GetMapping("/users/current")
     public HashMap<String, Object> findCurrentUser(HttpSession session)throws Exception{
-        String sessionUsername = session.getId();
-        Long longUsername = Long.parseLong(sessionUsername);
-        Optional<User> response = userRepository.findById(longUsername);
+        Object sessionUserId = session.getAttribute("userId");
+        String stringUserId = String.valueOf(sessionUserId);
+        Long longUserId = Long.parseLong(stringUserId);
+        Optional<User> response = userRepository.findById(longUserId);
         if(response.isPresent()){
             User user = response.get();
+            Iterable<Trail> trails = trailRepository.findByUser(user);
             HashMap<String, Object> result = new HashMap<>();
             result.put("user", user);
+            result.put("trails", trails);
             return result;
         }
         throw new Exception("No such user");
@@ -62,11 +68,8 @@ public class UserController {
         User createdUser = userService.saveUser(user);
         if(createdUser != null){
             session.setAttribute("username", createdUser.getUsername());
+            session.setAttribute("userId", createdUser.getId());
         }
-        System.out.println("session id");
-        System.out.println(session.getId());
-        System.out.println("session.getAttributeNames");
-        System.out.println(session.getAttribute("username"));
         return createdUser;
     }
 
@@ -99,11 +102,14 @@ public class UserController {
         boolean valid = bCryptPasswordEncoder.matches(login.getPassword(), user.getPassword());
         if(valid){
             session.setAttribute("username", user.getUsername());
+            session.setAttribute("userId", user.getId());
             return user;
         }else{
             throw new Exception("Invalid Credentials");
         }
     }
+
+    //logout
 
 
 

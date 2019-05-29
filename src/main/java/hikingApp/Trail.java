@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Trail {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
@@ -15,15 +15,15 @@ public class Trail {
 
     private String name;
 
-    private String location;
-
-    private Integer length;
-
-    private Long elevation;
-
-    private Integer stars;
-
-    private String url;
+//    private String location;
+//
+//    private Integer length;
+//
+//    private Long elevation;
+//
+//    private Integer stars;
+//
+//    private String url;
 
     public User getUser() {
         return user;
@@ -49,45 +49,45 @@ public class Trail {
         this.name = name;
     }
 
-    public String getLocation(){
-        return location;
-    }
-
-    public void setLocation(String location){
-        this.location = location;
-    }
-
-    public Integer getLength(){
-        return length;
-    }
-
-    public void setLength(Integer length){
-        this.length = length;
-    }
-
-    public Long getElevation(){
-        return elevation;
-    }
-
-    public void setElevation(Long elevation){
-        this.elevation = elevation;
-    }
-
-    public Integer getStars(){
-        return stars;
-    }
-
-    public void setStars(Integer Stars){
-        this.stars = stars;
-    }
-
-    public String getUrl(){
-        return url;
-    }
-
-    public void setUrl(String url){
-        this.url = url;
-    }
+//    public String getLocation(){
+//        return location;
+//    }
+//
+//    public void setLocation(String location){
+//        this.location = location;
+//    }
+//
+//    public Integer getLength(){
+//        return length;
+//    }
+//
+//    public void setLength(Integer length){
+//        this.length = length;
+//    }
+//
+//    public Long getElevation(){
+//        return elevation;
+//    }
+//
+//    public void setElevation(Long elevation){
+//        this.elevation = elevation;
+//    }
+//
+//    public Integer getStars(){
+//        return stars;
+//    }
+//
+//    public void setStars(Integer Stars){
+//        this.stars = stars;
+//    }
+//
+//    public String getUrl(){
+//        return url;
+//    }
+//
+//    public void setUrl(String url){
+//        this.url = url;
+//    }
 
 
 }

@@ -15,10 +15,10 @@ public class TrailController {
     @Autowired
     private TrailRepository trailRepository;
 
-    @GetMapping("/trails")
-    public Iterable<Trail> trailIndex(){
-        return trailRepository.findAll();
-    }
+//    @GetMapping("/trails")
+//    public Iterable<Trail> trailIndex(){
+//        return trailRepository.findAll();
+//    }
 
     @PostMapping("/trails")
     public Trail newString(@RequestBody Trail trail, HttpSession session) throws Exception{
