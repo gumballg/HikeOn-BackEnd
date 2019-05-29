@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21a2c512-e779-44de-ada7-7d07355d3920" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/hikingApp/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hikingApp/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/hikingBack-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/hikingBack-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/hikingBack-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/hikingBack-1.0-SNAPSHOT.jar.original" afterDir="false" />
     </list>
@@ -21,18 +20,9 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hikingApp/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
+            <state relative-caret-position="1275">
               <caret line="85" column="53" selection-start-line="85" selection-start-column="53" selection-end-line="85" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -40,6 +30,13 @@
                 <element signature="e#682#683#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6034" />
           </provider>
         </entry>
       </file>
@@ -207,6 +204,11 @@
             <path>
               <item name="hikingBack" type="b2602c69:ProjectViewProjectNode" />
               <item name="hikingApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hikingBack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hikingApp" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hikingBack" type="b2602c69:ProjectViewProjectNode" />
@@ -429,7 +431,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hikingApp/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
+        <state relative-caret-position="1275">
           <caret line="85" column="53" selection-start-line="85" selection-start-column="53" selection-end-line="85" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -437,6 +439,11 @@
             <element signature="e#682#683#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6034" />
       </provider>
     </entry>
   </component>
