@@ -19,9 +19,9 @@ public class Trail {
 
     private Integer length;
 
-    private Integer elevation;
+    private Integer high;
 
-    private Integer stars;
+    private Float stars;
 
     private String url;
 
@@ -65,19 +65,19 @@ public class Trail {
         this.length = length;
     }
 
-    public Integer getElevation(){
-        return elevation;
+    public Integer gethigh(){
+        return high;
     }
 
-    public void setElevation(Integer elevation){
-        this.elevation = elevation;
+    public void sethigh(Integer high){
+        this.high = high;
     }
 
-    public Integer getStars(){
+    public Float getStars(){
         return stars;
     }
 
-    public void setStars(Integer Stars){
+    public void setStars(Float Stars){
         this.stars = stars;
     }
 
