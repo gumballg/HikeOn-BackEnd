@@ -110,11 +110,4 @@ public class UserController {
     }
 
     //logout
-
-
-
-
-
-
-
 }

@@ -15,11 +15,6 @@ public class TrailController {
     @Autowired
     private TrailRepository trailRepository;
 
-//    @GetMapping("/trails")
-//    public Iterable<Trail> trailIndex(){
-//        return trailRepository.findAll();
-//    }
-
     @PostMapping("/trails")
     public Trail newString(@RequestBody Trail trail, HttpSession session) throws Exception{
         User user = userRepository.findByUsername(session.getAttribute("username").toString());
@@ -36,5 +31,4 @@ public class TrailController {
         trailRepository.deleteById(id);
         return("trail deleted " + id);
     }
-
 }
