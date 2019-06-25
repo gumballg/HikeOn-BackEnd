@@ -1,7 +1,7 @@
 # Hiking-Back API
 
 This is a rebuilt back end for a decoupled front end. This API takes advantage of Java, Spring Boot, and Maven.
-The application can make calls to this API which includes two models, users and trails.
+The application can make calls to this API which includes two models, users and trails. In our revision on this app we added a second model giving the users the option to save trails. https://hikeon.herokuapp.com/
 
 ## Getting Started
 
